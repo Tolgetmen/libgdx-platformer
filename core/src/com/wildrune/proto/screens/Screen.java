@@ -20,7 +20,6 @@ public abstract class Screen implements com.badlogic.gdx.Screen {
 
     public Screen() {
         camera = new OrthographicCamera();
-        camera.position.set(ideal_width / 2, ideal_height, 0);
         viewport = new FitViewport(ideal_width, ideal_height, camera);
     }
 
