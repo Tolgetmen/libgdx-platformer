@@ -10,17 +10,12 @@ buildscript {
 }
 
 allprojects {
-    apply plugin: "eclipse"
     apply plugin: "idea"
 
     version = '1.0'
     ext {
         appName = "platformer"
-        gdxVersion = '1.9.6'
-        roboVMVersion = '2.3.0'
-        box2DLightsVersion = '1.4'
-        ashleyVersion = '1.7.0'
-        aiVersion = '1.8.0'
+        gdxVersion = '1.9.8'
     }
 
     repositories {
@@ -49,8 +44,4 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
     }
-}
-
-tasks.eclipse.doLast {
-    delete ".project"
 }
